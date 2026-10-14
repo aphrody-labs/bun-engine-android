@@ -1,0 +1,28 @@
+{
+  "name": "@aphrody/android",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "bun@1.4.4",
+  "engines": { "bun": ">=1.4.4" },
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build": "powershell -NoProfile -File scripts/bun.ps1 build",
+    "test": "powershell -NoProfile -File scripts/bun.ps1 test",
+    "doctor": "powershell -NoProfile -File scripts/bun.ps1 doctor",
+    "dev": "powershell -NoProfile -File scripts/bun.ps1 dev",
+    "android:devices": "powershell -NoProfile -File scripts/bun.ps1 devices",
+    "android:install": "powershell -NoProfile -File scripts/bun.ps1 install",
+    "android:sdk": "powershell -NoProfile -File scripts/bun.ps1 sdk",
+    "android:build": "powershell -NoProfile -File scripts/build-android.ps1",
+    "rust:build": "powershell -NoProfile -File scripts/build-rust.ps1",
+    "ffi": "powershell -NoProfile -File scripts/bun.ps1 ffi",
+    "java:ffi": "powershell -NoProfile -File scripts/test-java-ffi.ps1",
+    "docs:sync": "powershell -NoProfile -File scripts/bun.ps1 docs-sync",
+    "docs:check": "powershell -NoProfile -File scripts/bun.ps1 docs-check",
+    "docs:test": "powershell -NoProfile -File scripts/bun.ps1 docs-test",
+    "docs:auto": "powershell -NoProfile -File scripts/install-docs-autosync.ps1"
+  },
+  "devDependencies": { "bun-types": "file:../bun/packages/bun-types" }
+}

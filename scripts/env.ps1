@@ -1,0 +1,13 @@
+$AndroidWorkspace = Split-Path $PSScriptRoot -Parent
+$env:JAVA_HOME = Join-Path $AndroidWorkspace 'tools\jdk'
+$env:ANDROID_HOME = Join-Path $AndroidWorkspace 'sdk'
+$env:ANDROID_SDK_ROOT = $env:ANDROID_HOME
+$env:ANDROID_NDK_HOME = Join-Path $env:ANDROID_HOME 'ndk\30.0.16248370'
+$env:ANDROID_NDK_ROOT = $env:ANDROID_NDK_HOME
+$env:GHIDRA_INSTALL_DIR = Join-Path $AndroidWorkspace 'tools\ghidra'
+$env:GHIDRA_HOME = $env:GHIDRA_INSTALL_DIR
+$env:GRADLE_HOME = Join-Path $AndroidWorkspace 'tools\gradle-9.8.1'
+$BunCheckout = if ($env:APHRODY_BUN_CHECKOUT) { $env:APHRODY_BUN_CHECKOUT } else { Join-Path (Split-Path $AndroidWorkspace -Parent) 'bun' }
+$BunRuntime = if ($env:ANDROID_BUN_BIN) { $env:ANDROID_BUN_BIN } else { Join-Path $BunCheckout 'build\release\bun.exe' }
+$ToolPaths = @((Split-Path $BunRuntime -Parent), "$AndroidWorkspace\bin", "$env:JAVA_HOME\bin", "$env:ANDROID_HOME\cmdline-tools\latest\bin", "$env:ANDROID_HOME\platform-tools", "$env:ANDROID_HOME\build-tools\37.0.0", "$env:ANDROID_HOME\emulator", "$env:GRADLE_HOME\bin", "$AndroidWorkspace\tools\jadx\bin")
+$env:PATH = (($ToolPaths + ($env:PATH -split ';')) | Select-Object -Unique) -join ';'

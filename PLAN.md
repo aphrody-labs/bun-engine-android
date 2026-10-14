@@ -1,0 +1,24 @@
+# État
+
+- [x] Inventaire Windows et sources officielles vérifiés.
+- [x] Android CLI 23, Java 21, Gradle 9.8.1, platform-tools et émulateur installés.
+- [x] Ghidra 12.1.4, JADX 1.5.6, Apktool 3.0.3 et clones officiels vérifiés.
+- [x] Frida 17.23.3 et frida-tools installés via Bun uv.
+- [x] Package Bun Android préparé, bundling et tests réussis.
+- [x] Rust Android : quatre cibles, cargo-ndk et projet JNI préparés.
+- [x] Android SDK 37.2, Build Tools 37, NDK r30 et CMake 4.1.2 : installation et validation.
+- [x] Android Studio 2026.2.1.8 : installation Winget réussie, build et JBR 25 vérifiés.
+- [x] JDK 27 : installation et compilation réelle.
+- [x] Monorepo crates/packages/apps, Bun 1.4.4 réel, Rust nightly 1.101.
+- [x] Rust quatre ABI, DLL Windows et exports ELF/C/JNI vérifiés.
+- [x] Java 21 JNI et Java 27 FFM exécutés sur la même DLL Rust.
+- [ ] Compilation Rust quatre ABI et APK Java/Bun/Rust.
+- [ ] Émulateur : image, AVD et exécution APK.
+- [ ] PATH persistant, tests RE complets et documentation finale.
+- [x] Context7 : références officielles Compose récupérées et recoupées.
+- [ ] GitHub officiel et Google Maven : versions octobre 2026 documentées.
+- [ ] Jetpack Compose/Material 3 : composants, runtime, thème et état intégrés.
+- [ ] APK Compose : build, lint et tests sur émulateur.
+- [ ] Sept corpus officiels docs/rust, bun, java, jetpack, emu, ui, m3.
+- [ ] Script Bun : découverte complète des sources, téléchargement, cache, provenance et vérification.
+- [ ] Synchronisation initiale et automatique : tests et preuves de fraîcheur.
